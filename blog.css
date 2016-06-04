@@ -1,0 +1,358 @@
+/*
+ * Globals
+ */
+html {
+
+}
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+  background-color: #333;
+  cursor: default;
+}
+
+a {
+  cursor: pointer;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
+
+.row.no-pad {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row.no-pad [class*='col-']:not(:first-child),
+.row.no-pad [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+  background-color: #428bca;
+  -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+          box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+}
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.blog-nav li {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    font-weight: 500; 
+}
+.blog-nav li a {
+    color: #fff;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header-container {
+  margin: 0px 0px 40px;
+  background-color: #fafafa;
+}
+.blog-header {
+  margin: 20px auto;
+}
+.blog-title {
+  margin: 0;
+  font-size: 60px;
+  font-weight: normal;
+  display: inline-block;
+}
+.blog-description {
+  font-size: 20px;
+  color: #999;
+  margin: 0px;
+  margin-left: 50px;
+  display: inline-block;
+  vertical-align: super;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+
+.blog-sidebar{
+  padding: 0px 30px;
+  background-color: #fff;
+  margin-bottom: 60px;
+}
+.blog-sidebar:after,
+.blog-sidebar:before{
+  content: "";
+  position: absolute;
+  display: block;
+  border: 30px solid #fff;
+  border-left-width: 89px;
+  border-right-width: 89px;
+}
+.blog-sidebar:after{
+  border-bottom-color: transparent;
+  border-top-width: 0px;
+  bottom: -30px;
+}
+.blog-sidebar:before{
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  bottom: -60px;
+}
+.sidebar-container{
+  font-size: 16px;
+  border: 4px dotted #3498db;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  margin: 0px 10px;
+  min-height: 300px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+.sidebar-container center{
+  align-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  margşin-left: -10px;
+}
+.sidebar-module {
+  margin: 10px 15px;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+  font-family: 'Droid Serif', serif;
+}
+
+.post-title-bg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 60px;
+  position: relative;
+  background: #3498db;
+  margin: 0px;
+  height: 60px;
+}
+.post-title-bg:before, .post-title-bg:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -5px;
+  border: 20px solid #2980b9;
+  height: 70px;
+  z-index: -1;
+}
+.post-title-bg:after{
+  left: -25px;
+  border-left-color: transparent;
+  border-right-width: 15px;
+  border-left-width: 10px;
+}
+.post-title-bg:before{
+  right: -25px;
+  border-right-color: transparent;
+  border-left-width: 15px;
+  border-right-width: 10px;
+}
+
+.post-title {
+  color: #fff;
+  font-size: 38px;
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0px rgba(100,100,100,0.4);
+  margin-bottom: 4px;
+}
+
+.post-container{
+  background-color: #fff;
+  border: 2px solid #3498db;
+  border-top-width: 0px;
+  padding: 0px;
+}
+a.post-content-link{
+  color: #555;
+  transition: 0.2s ease-in;
+  text-decoration: none;
+}
+a.post-content-link :hover,
+a.post-content-link :focus,
+a.post-content-link :active,
+a.post-content-link :visited {
+  color: #174a6b;
+  text-decoration: none;
+}
+.post-content-container{
+  margin: 0px;
+  display: none;
+  height: auto;
+}
+
+.post-content-container p{
+  padding: 10px;
+  margin: 0px;
+}
+.post-info-container{
+  background-color: rgba(100,100,100,0.1);
+  padding: 0px;
+  margin: 0px;
+}
+.post-date{
+  display: inline-block;
+  margin: 0px;
+  padding: 10px;
+}
+.post-author{
+  display: inline-block;
+  float: right;
+  margin: 0px;
+  padding: 10px;
+  padding-left: 20px;
+  font-weight: 600;
+}
+
+.page-post-title-bg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 60px;
+  position: relative;
+  background: #3498db;
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 40px;
+  height: 60px;
+}
+.page-post-title-bg:before, .page-post-title-bg:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 20px;
+  border: 30px solid #2980b9;
+  height: 60px;
+  z-index: -2;
+}
+.page-post-title-bg:after{
+  left: -40px;
+  border-left-color: transparent;
+}
+.page-post-title-bg:before{
+  right: -40px;
+  border-right-color: transparent;
+}
+
+.page-post-title:before, .page-post-title:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -20px;
+  border: 10px solid #174a6b;
+  border-bottom-color: transparent;
+  height: 20px;
+  z-index: -1;
+}
+.page-post-title:after{
+  left: 0px;
+  border-left-color: transparent;
+}
+.page-post-title:before{
+  right: 0px;
+  border-right-color: transparent;
+}
+
+.page-post-container{
+  border-top-width: 2px;
+  margin: 0px 40px;
+}
+
+.page-post-content-container{
+  font-size: 22px;
+  padding: 25px 20px;
+  margin: 0px;
+  height: auto;
+}
+.page-post-content-container p{
+  margin: 0px;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
